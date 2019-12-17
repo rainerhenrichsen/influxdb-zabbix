@@ -87,7 +87,7 @@ replace(replace(CASE
 -- timestamp (in ms)
 || ' ' || CAST((tre.clock * 1000.) as char) as INLINE
 ,  CAST((tre.clock * 1000.) as char) as clock
-FROM trends tre 
+FROM trends_uint tre 
 INNER JOIN items ite on ite.itemid = tre.itemid
 INNER JOIN hosts hos on hos.hostid = ite.hostid
 INNER JOIN hosts_groups hg on hg.hostid = hos.hostid
